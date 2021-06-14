@@ -23,18 +23,18 @@ def acchimuite(result)
     puts "ほい！"
     unless ([0, 1, 2, 3]).include?(myhoi)
         if result == "win"
-        puts("あなたはどちらも指さなかった...")
+            puts("あなたはどちらも指さなかった...")
         else
-        puts("あなたは顔を動かさなかった...反則負け！")
+            puts("あなたは顔を動かさなかった...反則負け！")
         end
     else
         puts "あなた:"+ $hoi[myhoi]
         puts "CP:"+ $hoi[cphoi]   
         if myhoi == cphoi
             if result == "win"
-            puts "あなたの勝ち！"
+                puts "あなたの勝ち！"
             else
-            puts "CPの勝ち！"
+                puts "CPの勝ち！"
             end
         end
     end
@@ -57,7 +57,7 @@ def janken(myhand, cphand)
             puts("さようなら")
             exit
         end
-        exiten(myhand, cphand)
+        janken(myhand, cphand)
     elsif (myhand == 0 && cphand == 1) || (myhand == 1 && cphand == 2) || (myhand == 2 && cphand == 0)
         result = "win"
     else
